@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1IDhere",
+    "Statement": [
+        {
+            "Sid": "Stmt1OTHERID HERE",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::bucket-name/*"
+        }
+    ]
+}
+
+And in Acl have to check 2 mark as checked only
+( Block public access to buckets and objects granted through any access control lists (ACLs)
+S3 will ignore all ACLs that grant public access to buckets and objects. )
